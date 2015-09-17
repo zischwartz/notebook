@@ -53,6 +53,9 @@ WORKDIR /srv/notebook/
 
 RUN pip3 install --pre -e .
 
+EXPOSE 8888
+
+
 # install kernels
 RUN python2 -m ipykernel.kernelspec
 RUN python3 -m ipykernel.kernelspec
