@@ -57,4 +57,8 @@ RUN pip3 install --pre -e .
 RUN python2 -m ipykernel.kernelspec
 RUN python3 -m ipykernel.kernelspec
 
+RUN python -m pip install --upgrade ipywidgets
+
 EXPOSE 8888
+
+CMD python -m IPython notebook --no-browser --port 8888 --ip=* --NotebookApp.allow_origin=*
